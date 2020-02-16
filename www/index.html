@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script>
+        function calc() {
+
+
+            var gross = parseInt(document.getElementById("gsal").value);
+            var bal = parseInt(document.getElementById("lbalance").value);
+            var ab = parseInt(document.getElementById("days").value);
+            //var l= parseInt(document.getElementById("lop").value);
+            var advance = parseInt(document.getElementById("adv").value);
+            var month = parseInt(document.getElementById("dob").value);
+            var l = (gross / month) * ab;
+            document.getElementById("lop").value=l;
+            var tot = gross - l;
+            document.getElementById("net").value = tot;
+        }
+    </script>
+</head>
+<body>
+<form >
+     Gross Salary:<input type="number" name="gsal" id="gsal"
+           placeholder="enter gross salary"><br><br>
+    No of Days in Month:<input type="number" name="dob" id="dob"
+           placeholder="enter no of days"><br><br>
+   Leave Balance:<input type="number" name="lbalance" id="lbalance"
+           placeholder=" enter the no of leave balance"><br><br>
+    No. of Days Absent:<input type="number" name="days" id="days"
+           placeholder="enter no of days absent"><br><br>
+    LOP<input type="text" name="lop" id="lop"
+           placeholder="enter lop"><br><br>
+    Advance: <input type="number" name="adv" id="adv"
+           placeholder="advance amt"><br><br>
+    Net Salary:<input type="text" name="net" id="net"
+           placeholder="Net Salary"><br><br>
+    <input type="button" value="Calculate" onclick="calc()">
+    <input type="submit" value="Reset">
+</form>
+</body>
+</html>
